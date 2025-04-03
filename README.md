@@ -14,7 +14,7 @@ A modern, responsive portfolio website built with Flask that automatically parse
 
 ## Web Interface
 
-![Portfolio Website Interface](app/static/images/portfolio-interface.png)
+![Portfolio Website Interface](app/static/images/web-image.jpg)
 
 ## Quick Start
 
