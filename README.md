@@ -12,6 +12,10 @@ A modern, responsive portfolio website built with Flask that automatically parse
 - Skills section with categorized skills and icons
 - Contact section with social media links
 
+## Web Interface
+
+![Portfolio Website Interface](app/static/images/portfolio-interface.png)
+
 ## Quick Start
 
 1. Place your resume in PDF format in the root directory as `resume.pdf`
