@@ -275,51 +275,117 @@ section {
     background-color: var(--accent-color);
 }
 
-/* About Section */
+/* About Section Styles */
 .about-section {
-    background-color: var(--background-dark);
-    position: relative;
+    padding: 100px 0;
+    background: var(--background-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .about-content {
-    background-color: var(--background-light);
+    background: var(--background-dark);
+    padding: 2rem;
     border-radius: 10px;
-    padding: 2.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: var(--transition);
-    height: 100%;
-    border: 1px solid rgba(0, 255, 157, 0.1);
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
 }
 
-.about-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, 
-        rgba(0, 255, 157, 0.1) 0%,
-        transparent 100%);
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.about-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(0, 255, 157, 0.2);
-}
-
-.about-content p {
-    color: var(--text-primary);
-    font-size: 1.1rem;
+.about-summary {
+    font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.interests, .values {
+    background: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.interests h3, .values h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.interests ul, .values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interests li, .values li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+}
+
+.interests li:before, .values li:before {
+    content: "•";
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.fun-facts {
+    background: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fun-facts h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.fun-facts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fun-facts li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+}
+
+.fun-facts li:before {
+    content: "✨";
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-summary {
+        font-size: 1.1rem;
+    }
+    
+    .education-card {
+        margin-bottom: 1rem;
+    }
 }
 
 .contact-info {
@@ -347,13 +413,13 @@ section {
     text-align: center;
 }
 
-/* Education Section */
+/* Education Section Styles */
 .education-content {
     background-color: var(--background-lighter);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    height: 100%;
+    height: auto;
 }
 
 .education-card {
@@ -365,6 +431,11 @@ section {
     border-left: 3px solid var(--primary-color);
     position: relative;
     overflow: hidden;
+    height: auto;
+}
+
+.education-card:last-child {
+    margin-bottom: 0;
 }
 
 .education-card::before {
@@ -387,6 +458,23 @@ section {
 .education-card h4 {
     color: var(--text-primary);
     margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.education-card .text-primary {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.education-card .text-secondary {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.education-card p {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
     position: relative;
     z-index: 1;
 }

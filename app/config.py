@@ -6,48 +6,73 @@ This file contains placeholder data that you can replace with your own informati
 # Portfolio Configuration
 PORTFOLIO_CONFIG = {
     'personal_info': {
-        'name': 'Your Name',
-        'title': 'Your Professional Title',
-        'bio': 'A brief description about yourself and your professional background. Highlight your key skills and what you are passionate about.',
-        'email': 'your.email@example.com',
-        'phone': '+1 (123) 456-7890',
-        'location': 'City, State',
-        'github': 'https://github.com/yourusername',
-        'linkedin': 'https://linkedin.com/in/yourusername'
+        'name': 'your name',
+        'title': 'your title',
+        'bio': 'your bio',
+        'email': 'your email',
+        'phone': 'your phone number',
+        'location': 'your location',
+        'github': 'your github link',
+        'linkedin': 'your linkedin link'
+    },
+    'about_me': {
+        'summary': 'your summary',
+        'interests': [
+            'Machine Learning',
+            'Deep Learning',
+            'Natural Language Processing',
+            'Computer Vision',
+            'Cloud Computing',
+            'Software Development'
+        ],
+        'core_values': [
+            'Continuous Learning',
+            'Problem Solving',
+            'Innovation',
+            'Collaboration',
+            'Clean Code',
+            'User-Centric Design'
+        ],
+        'fun_facts': [
+            'I love exploring new machine learning algorithms and implementing them in real-world applications',
+            'I enjoy participating in Kaggle competitions to sharpen my data science skills',
+            'I maintain a tech blog where I share my learning journey and insights about AI',
+            'I am passionate about mentoring others and helping them grow in their tech careers'
+        ]
     },
     'education': [
         {
-            'institution': 'University Name',
-            'degree': 'Degree Name',
-            'date': 'Year - Year',
-            'gpa': 'GPA'
+            'institution': 'your institution',
+            'degree': 'your degree',
+            'date': 'your date',
+            'gpa': 'your gpa'
         },
         {
-            'institution': 'Another University',
-            'degree': 'Another Degree',
-            'date': 'Year - Year',
-            'gpa': 'GPA'
+            'institution': 'your institution',
+            'degree': 'your degree',
+            'date': 'your date',
+            'gpa': 'your gpa'
         }
     ],
     'experience': [
         {
-            'company': 'Company Name',
-            'position': 'Job Title',
-            'date': 'Month Year - Month Year',
+            'company': 'your company',
+            'position': 'your position',
+            'date': 'your date',
             'achievements': [
-                'Key achievement or responsibility 1',
-                'Key achievement or responsibility 2',
-                'Key achievement or responsibility 3'
+                'your achievement 1',
+                'your achievement 2',
+                'your achievement 3'
             ]
         },
         {
-            'company': 'Another Company',
-            'position': 'Another Job Title',
-            'date': 'Month Year - Month Year',
+            'company': 'your company',
+            'position': 'your position',
+            'date': 'your date',
             'achievements': [
-                'Key achievement or responsibility 1',
-                'Key achievement or responsibility 2',
-                'Key achievement or responsibility 3'
+                'your achievement 1',
+                'your achievement 2',
+                'your achievement 3'
             ]
         }
     ],

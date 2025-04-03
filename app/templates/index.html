@@ -36,11 +36,35 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-content">
-                    <p class="mb-4">{{ data.personal_info.bio }}</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> {{ data.personal_info.email }}</p>
-                        <p><i class="fas fa-phone"></i> {{ data.personal_info.phone }}</p>
-                        <p><i class="fas fa-map-marker-alt"></i> {{ data.personal_info.location }}</p>
+                    <p class="about-summary">{{ data.about_me.summary }}</p>
+                    
+                    <div class="about-details">
+                        <div class="interests">
+                            <h3>Interests</h3>
+                            <ul>
+                                {% for interest in data.about_me.interests %}
+                                <li>{{ interest }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        
+                        <div class="values">
+                            <h3>Core Values</h3>
+                            <ul>
+                                {% for value in data.about_me.core_values %}
+                                <li>{{ value }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fun-facts">
+                        <h3>Fun Facts</h3>
+                        <ul>
+                            {% for fact in data.about_me.fun_facts %}
+                            <li>{{ fact }}</li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
             </div>
