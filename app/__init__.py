@@ -1,7 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24)
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev')
 
-from app import routes 
+# Register blueprints
+from app.routes import main
+app.register_blueprint(main) 
