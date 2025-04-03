@@ -245,18 +245,6 @@ def new_page():
    ```
 3. Visit `http://localhost:5000` in your browser
 
-### 8. Troubleshooting
-
-#### Port Conflicts
-If port 5000 is in use, modify `run.py`:
-```python
-app.run(debug=True, port=YOUR_PORT_NUMBER)
-```
-
-#### Resume Parsing Issues
-If the resume parser doesn't extract all the information correctly:
-1. Check the format of your resume
-2. Manually update the information in `app/config.py`
 
 ## Project Structure
 
@@ -283,4 +271,38 @@ portfolio-website/
 
 ## Contributing
 
-Feel free to submit issues and enhancement requests! 
+Feel free to submit issues and enhancement requests!
+
+## Deployment Guide
+
+### Deploying to GitHub Pages
+
+1. **Create a GitHub repository**
+   - Create a new repository on GitHub
+   - Make sure it's public (required for GitHub Pages)
+
+2. **Push your code**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/portfolio.git
+   git push -u origin main
+   ```
+
+3. **Enable GitHub Pages**
+   - Go to your repository settings
+   - Navigate to "Pages" section
+   - Under "Source", select "GitHub Actions"
+
+4. **Set up Formspree (for contact form)**
+   - Go to [Formspree](https://formspree.io/)
+   - Create a free account
+   - Create a new form
+   - Copy your form endpoint
+   - Update the form action in `app/templates/index.html`
+
+5. **Your site will be available at**
+   `https://yourusername.github.io/portfolio/`
+

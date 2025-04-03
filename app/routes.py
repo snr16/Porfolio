@@ -29,9 +29,6 @@ def index():
     # Create a copy of the config data
     portfolio_data = PORTFOLIO_CONFIG.copy()
     
-    # Use the generic configuration without trying to parse the resume
-    # No need to transform skills data or extract projects from experience
-    
     return render_template('index.html', 
                          data=portfolio_data,
                          theme=THEME_CONFIG)
@@ -172,27 +169,30 @@ def parse_resume_route():
             os.remove(temp_path)
         return jsonify({'error': str(e)}), 500
 
-@app.route('/about')
+@main.route('/about')
 def about():
-    # personal_info = resume_data.get('personal_info', {})
-    # education = resume_data.get('education', [])
-    return render_template('about.html', 
-                          title='About')
+    return render_template('index.html', 
+                          title='About',
+                          data=PORTFOLIO_CONFIG,
+                          theme=THEME_CONFIG)
 
-@app.route('/experience')
+@main.route('/experience')
 def experience():
-    # experience = resume_data.get('experience', [])
-    return render_template('experience.html', 
-                          title='Experience')
+    return render_template('index.html', 
+                          title='Experience',
+                          data=PORTFOLIO_CONFIG,
+                          theme=THEME_CONFIG)
 
-@app.route('/projects')
+@main.route('/projects')
 def projects():
-    # projects = resume_data.get('projects', [])
-    return render_template('projects.html', 
-                          title='Projects')
+    return render_template('index.html', 
+                          title='Projects',
+                          data=PORTFOLIO_CONFIG,
+                          theme=THEME_CONFIG)
 
-@app.route('/skills')
+@main.route('/skills')
 def skills():
-    # skills = resume_data.get('skills', {})
-    return render_template('skills.html', 
-                          title='Skills') 
+    return render_template('index.html', 
+                          title='Skills',
+                          data=PORTFOLIO_CONFIG,
+                          theme=THEME_CONFIG) 
