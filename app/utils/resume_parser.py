@@ -35,7 +35,7 @@ def parse_resume(pdf_path):
             'message': str(e)
         }
 
-def extract_personal_info(text_lines):
+def extract_personal_info(text):
     personal_info = {
         'name': None,
         'email': None,
@@ -45,7 +45,10 @@ def extract_personal_info(text_lines):
         'linkedin': None
     }
     
-    for i, line in enumerate(text_lines):
+    # Split text into lines
+    lines = text.split('\n')
+    
+    for i, line in enumerate(lines):
         line = line.strip()
         
         # Name is usually in the first few lines, all caps
