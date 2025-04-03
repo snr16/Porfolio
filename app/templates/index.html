@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <section class="hero-section text-center py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 mb-4">Hi, I'm Niranjan Reddy</h1>
+                <p class="lead mb-4">A passionate software developer focused on creating innovative solutions</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="{{ url_for('about') }}" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-secondary btn-lg px-4">Contact Me</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- You can add your profile image here -->
+                <div class="text-center">
+                    <i class="fas fa-user-circle fa-10x text-primary"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-briefcase fa-3x mb-3 text-primary"></i>
+                        <h3 class="card-title">Experience</h3>
+                        <p class="card-text">View my professional journey and work experience</p>
+                        <a href="{{ url_for('experience') }}" class="btn btn-outline-primary">View Experience</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-project-diagram fa-3x mb-3 text-primary"></i>
+                        <h3 class="card-title">Projects</h3>
+                        <p class="card-text">Explore my portfolio of projects and achievements</p>
+                        <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">View Projects</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+                        <h3 class="card-title">Skills</h3>
+                        <p class="card-text">Check out my technical skills and expertise</p>
+                        <a href="{{ url_for('skills') }}" class="btn btn-outline-primary">View Skills</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %} 
